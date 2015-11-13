@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>VMware SVGA Device Developer Kit</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="lightbox.css" type="text/css" />
+  <script type="text/javascript" src="lightbox.js"></script>
+</head>
+<body>
+
+<div class="column">
+  <div class="content">
+
+    <h1 class="first">VMware SVGA Device Developer Kit</h1>
+
+    <div class="screenshot">
+      <div><a href="screenshots/bunnies.png" rel="lightbox">
+         <img src="screenshots/bunnies-tn.png" />
+      </a></div>
+      <div><a href="screenshots/cube.png" rel="lightbox">
+         <img src="screenshots/cube-tn.png" />
+      </a></div>
+      <div><a href="screenshots/dynvert.png" rel="lightbox">
+         <img src="screenshots/dynvert-tn.png" />
+      </a></div>
+      <div><a href="screenshots/shaders.png" rel="lightbox">
+         <img src="screenshots/shaders-tn.png" />
+      </a></div>
+    </div>
+
+    <p>
+    The <i>VMware SVGA II</i> device is the virtual graphics card
+    implemented by all VMware virtualization products. If you're running
+    a virtual machine using VMware Workstation, Fusion, Player, or ESX,
+    this is the graphics card that your virtual machine sees.
+    </p>
+
+    <p>
+    This graphics card doesn't look quite like any physical graphics
+    card that exists. In many ways it resembles a physical device,
+    but in other ways its programming model has been idealized or
+    otherwise modified to make it easier to emulate.
+    </p>
+
+    <p>
+    VMware's desktop virtualization products (Fusion, Workstation,
+    Player) can use your machine's physical graphics hardware to
+    implement acceleration for the VMware SVGA device. Currently it
+    supports a small amount of 2D acceleration, cursor acceleration,
+    video overlay support, and 3D graphics with Shader Model 2.0. All
+    of this acceleration is provided via a virtualized graphics
+    interface, so the same drivers in the VM work regardless of what
+    physical graphics card, if any, is physically available.
+    </p>
+
+    <p>
+    This project is a package of developer-oriented documentation for
+    the details of this virtualized graphics interface.  It consists
+    of some basic documentation, as well as a package of example
+    programs which demonstrate how to draw 2D and 3D graphics inside
+    a virtual machine. These examples run on the (virtual) bare metal,
+    without any OS or any other graphics driver loaded.
+    </p>
+
+    <p>
+    This package is provided for educational purposes, and for people
+    who are developing 3D drivers. It may be especially interesting to
+    hobbyist OS authors, or developers who want to experiment with
+    low-level 3D graphics without the complexity of a physical GPU's
+    programming interface.
+    </p>
+
+    <p>
+    This code won't help you if you're writing normal user-level apps
+    that you'd like to run inside a virtual machine. It's for driver
+    authors, and it assumes a reasonable amount of prior knowledge
+    about graphics hardware.
+    </p>
+
+    <h2 class="first">Requirements</h2>
+
+    <p>
+    Binaries are included if you just want to try out the examples.
+    To compile the code yourself, you'll need a few basic open source tools:
+    </p>
+    <ul>
+      <li>A recent version of GCC and binutils. <br /> I use GCC 4.2 (Older versions may
+    require tweaking the Makefile.rules file slightly.)</li>
+      <li>GNU Make</li>
+      <li>Python</li>
+    </ul>
+
+    <p>To run the examples, you'll need a recent version of VMware
+     Workstation, Fusion, or the free VMware Player. Some of the examples
+     will work on older versions, but Workstation 6.5.x or Fusion 2.0.x is
+     strongly recommended.</p>
+
+    <h2>Browse</h2>
+
+    <ul>
+    <li><a href="http://vmware-svga.git.sourceforge.net/git/gitweb.cgi?p=vmware-svga/vmware-svga;a=blob_plain;f=README.txt;hb=HEAD">README</li>
+    <li><a href="http://vmware-svga.git.sourceforge.net/git/gitweb.cgi?p=vmware-svga/vmware-svga;a=blob_plain;f=doc/svga_interface.txt;hb=HEAD"
+         >VMware SVGA Device Interface and Programming Model</a></li>
+    <li><a href="http://vmware-svga.git.sourceforge.net/git/gitweb.cgi?p=vmware-svga/vmware-svga;a=blob_plain;f=doc/gpu-wiov.pdf;hb=HEAD"
+         >GPU Virtualization on VMware's Hosted I/O Architecture</a> (PDF)</li>
+    <li><a href="http://vmware-svga.git.sourceforge.net/git/gitweb.cgi?p=vmware-svga/vmware-svga"
+         ><b>Browse the whole repository</b></a></li>
+    </ul>
+
+    <h2>Download</h2>
+
+    <p>
+    Development takes place in a Git repository hosted by Sourceforge:
+    </p>
+
+    <pre>git clone git://vmware-svga.git.sourceforge.net/gitroot/vmware-svga/vmware-svga</pre>
+
+  </div>
+
+  <div class="foot"> </div>
+</div>
+
+<div class="footer-logos">
+<a href="http://sourceforge.net/projects/vmware-svga"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=248328&amp;type=12" width="120" height="30" alt="Get VMware SVGA Device Developer Kit at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+</div>
+
+</body>
+</html>
